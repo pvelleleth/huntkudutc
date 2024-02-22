@@ -30,3 +30,11 @@
   border-radius: 8px;
   margin-top: 20px;
 }
+
+/* Media query for smaller screens (e.g., mobile devices) */
+@media only screen and (max-width: 600px) {
+  .landing-page {
+    background-size: contain;
+    background-position: top;
+  }
+}
