@@ -1,14 +1,21 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+
 import './index.css';
-import LandingPage from './LandingPage';
+import LandingPage from './Pages/Landing/LandingPage';
+import TeamPage from './Pages/Team/TeamPage'
 import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <LandingPage />
-  </React.StrictMode>
+import ReactDOM from 'react-dom';
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+
+ReactDOM.render(
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/team" element={<TeamPage />} />
+      </Routes>
+    </BrowserRouter>,
+    document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function

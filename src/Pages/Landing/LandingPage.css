@@ -18,11 +18,12 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: white;
+  color: white !important;
 }
 
 .content {
   z-index: 1;
+  color: white; /* Add this line to explicitly set the text color to white */
 }
 
 .team-image {
@@ -30,11 +31,22 @@
   border-radius: 8px;
   margin-top: 20px;
 }
+.content h1,
+.content p {
+  color: white; /* Add this line to set the text color for both h1 and p */
+}
+.meet-the-team-button {
+  display: inline-block;
+  background-color: #ff6f61;
+  color: white;
+  font-size: 18px;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+  margin-top: 20px;
+}
 
-/* Media query for smaller screens (e.g., mobile devices) */
-@media only screen and (max-width: 600px) {
-  .landing-page {
-    background-size: contain;
-    background-position: top;
-  }
+.meet-the-team-button:hover {
+  background-color: #e0584f;
 }
